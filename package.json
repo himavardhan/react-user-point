@@ -1,7 +1,7 @@
 {
   "name": "contextts",
   "version": "0.1.0",
-  "homepage": "userpoint",
+  "homepage": "/react-user-point/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
