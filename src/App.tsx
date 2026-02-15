@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { AppThemeContext } from './AppTheme';
+import { Home } from './Home';
 
 function App() {
    const { theme, setTheme } = React.useContext(AppThemeContext);
@@ -16,6 +17,7 @@ function App() {
         Dark Theme</label>
 
         <div> selected Theme:{theme}</div>
+        <Home></Home>
     </div>
   );
 }
