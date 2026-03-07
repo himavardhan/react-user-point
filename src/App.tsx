@@ -3,9 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 import { AppThemeContext } from './AppTheme';
 import { Home } from './Home';
+import { Login } from './Login';
 
 function App() {
    const { theme, setTheme } = React.useContext(AppThemeContext);
+   
+   var x=20;
+   var x=30;
+   x=40;
+   if(true){
+    var x=50;
+   }
+    console.log(x);
   return (
     <div className="App">
       <label htmlFor="light">
@@ -17,7 +26,8 @@ function App() {
         Dark Theme</label>
 
         <div> selected Theme:{theme}</div>
-        <Home></Home>
+        {/* <Home></Home> */}
+        <Login></Login>
     </div>
   );
 }
