@@ -4,6 +4,7 @@ import './App.css';
 import { AppThemeContext } from './AppTheme';
 import { Home } from './Home';
 import { Login } from './Login';
+import Helper from './helper';
 
 function App() {
    const { theme, setTheme } = React.useContext(AppThemeContext);
@@ -28,6 +29,7 @@ function App() {
         <div> selected Theme:{theme}</div>
         {/* <Home></Home> */}
         <Login></Login>
+        <Helper></Helper>
     </div>
   );
 }

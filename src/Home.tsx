@@ -4,7 +4,7 @@ export const Home: React.FC = (props) =>{
 
    const [text,setText] = useState('Guest');
    const [show,setShow] = useState(true);
-   const [count,setCount] = useState(1);
+   const [count,setCount] = useState(1); 
    const storeIntervel = useRef<any>(null);
    const number = useRef(0);
    const inputRef = useRef<any>(null);
@@ -13,6 +13,8 @@ export const Home: React.FC = (props) =>{
 // Added useRef use cases with timeIntervel & inputRef
    const [timer,settimer] = useState(0);
    const startTimer = ()=>{
+    clearInterval(storeIntervel.current);
+    settimer(0);
    storeIntervel.current = setInterval(()=>{
         settimer(prev => prev + 1 );
     },1000)
