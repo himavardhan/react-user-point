@@ -1,8 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { AppThemeContext } from './AppTheme';
-import { Home } from './Home';
 import { Login } from './Login';
 import Helper from './helper';
 
