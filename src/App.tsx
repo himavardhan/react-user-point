@@ -2,6 +2,8 @@ import React from 'react';
 import { AppThemeContext } from './AppTheme';
 import { Login } from './Login';
 import Helper from './helper';
+import { BookingForm } from './bookingForm';
+
 
 function App() {
    const { theme, setTheme } = React.useContext(AppThemeContext);
@@ -15,7 +17,7 @@ function App() {
     console.log(x);
   return (
     <div className="App">
-      <label htmlFor="light">
+      {/* <label htmlFor="light">
         <input type="radio" id="light" name='theme' value='light' checked = {theme === "light"} onChange={() => setTheme("light")} />
         light theme</label>
 
@@ -24,9 +26,11 @@ function App() {
         Dark Theme</label>
 
         <div> selected Theme:{theme}</div>
-        {/* <Home></Home> */}
+        <Home></Home> 
         <Login></Login>
-        <Helper></Helper>
+        <Helper></Helper> */}
+
+        <BookingForm></BookingForm>
     </div>
   );
 }
