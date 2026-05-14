@@ -5,6 +5,7 @@ import Helper from './helper';
 import { BookingForm } from './bookingForm';
 import  AppModel  from './Components/appModel';
 import ProdcutSearch from './Components/productSearch';
+import MatForm from './Components/materialForm';
 
 
 function App() {
@@ -40,11 +41,12 @@ function App() {
         {/* <BookingForm></BookingForm> */}
 
         
-          <AppModel open={openModel} close={() => handleClose()} />
+          {/* <AppModel open={openModel} close={() => handleClose()} />
 
             <button onClick= {() => { console.log('click the button'); setOpenModel((pre) => !pre)}} >Open</button>
-           
-           <ProdcutSearch />
+            */
+           <ProdcutSearch />}
+           {/* <MatForm></MatForm> */}
 
 
     </div>
