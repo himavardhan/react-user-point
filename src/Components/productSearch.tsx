@@ -27,7 +27,7 @@ const ProdcutSearch:FC = () =>{
     ]
 
     const filterItems = useMemo(()=> {
-        const resultItems = itemList.filter((item) => Object.values(item).some(value => value.toLowerCase().includes(inputValue)));
+        const resultItems = itemList.filter((item) => Object.values(item).some(value => value.toLowerCase().includes(inputValue.toLowerCase())));
         return resultItems;
     }, [inputValue]);
 
