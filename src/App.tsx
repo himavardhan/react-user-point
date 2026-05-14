@@ -4,6 +4,7 @@ import { Login } from './Login';
 import Helper from './helper';
 import { BookingForm } from './bookingForm';
 import  AppModel  from './Components/appModel';
+import ProdcutSearch from './Components/productSearch';
 
 
 function App() {
@@ -42,7 +43,10 @@ function App() {
           <AppModel open={openModel} close={() => handleClose()} />
 
             <button onClick= {() => { console.log('click the button'); setOpenModel((pre) => !pre)}} >Open</button>
-            {<p> test 12222222222 {openModel.toString()} </p> }
+           
+           <ProdcutSearch />
+
+
     </div>
   );
 }
