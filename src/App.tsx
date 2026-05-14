@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppThemeContext } from './AppTheme';
 import { Login } from './Login';
 import Helper from './helper';
 import { BookingForm } from './bookingForm';
+import  AppModel  from './Components/appModel';
 
 
 function App() {
    const { theme, setTheme } = React.useContext(AppThemeContext);
-   
+  const [openModel,setOpenModel] = useState(false);
    var x=20;
    var x=30;
    x=40;
@@ -15,6 +16,11 @@ function App() {
     var x=50;
    }
     console.log(x);
+
+  
+  const  handleClose = () => {
+      setOpenModel(false);
+  }
   return (
     <div className="App">
       {/* <label htmlFor="light">
@@ -30,7 +36,13 @@ function App() {
         <Login></Login>
         <Helper></Helper> */}
 
-        <BookingForm></BookingForm>
+        {/* <BookingForm></BookingForm> */}
+
+        
+          <AppModel open={openModel} close={() => handleClose()} />
+
+            <button onClick= {() => { console.log('click the button'); setOpenModel((pre) => !pre)}} >Open</button>
+            {<p> test 12222222222 {openModel.toString()} </p> }
     </div>
   );
 }
