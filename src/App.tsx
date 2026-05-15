@@ -6,6 +6,10 @@ import { BookingForm } from './bookingForm';
 import  AppModel  from './Components/appModel';
 import ProdcutSearch from './Components/productSearch';
 import MatForm from './Components/materialForm';
+import DataShareApi from './ContextAPIs/DataShare';
+import ContextParent from './ContextAPIs/ContextParent';
+import ContextChild1 from './ContextAPIs/ContextChild1';
+import ContextChild2 from './ContextAPIs/ContextChild2';
 
 
 function App() {
@@ -44,9 +48,16 @@ function App() {
           {/* <AppModel open={openModel} close={() => handleClose()} />
 
             <button onClick= {() => { console.log('click the button'); setOpenModel((pre) => !pre)}} >Open</button>
-            */
+            
            <ProdcutSearch />}
            {/* <MatForm></MatForm> */}
+
+          {/* Context API */}
+          <DataShareApi>
+            <ContextParent></ContextParent>
+            <ContextChild1></ContextChild1>
+            <ContextChild2></ContextChild2>
+          </DataShareApi>
 
 
     </div>
